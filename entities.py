@@ -18,13 +18,6 @@ class Sound:
     def play(self):
         winsound.PlaySound(self.path, winsound.SND_FILENAME)
 
-import random
-class RandomNumber:
-    def __init__(self):
-        self.number = random.randint(0, 100)
-    def get(self):
-        return self.number
-
 import webbrowser
 webbrowser.register('Chrome', None, webbrowser.BackgroundBrowser('C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'))
 browser = webbrowser.get('Chrome')
@@ -34,11 +27,3 @@ class Image:
         self.path = path
     def show(self):
         browser.open(self.path)
-"""
-if __name__ == '__main__':
-    car = Sound('C:/Users/User/source/repos/PythonConsole/PythonConsole/car.wav')
-    car.play()
-    image = Image('C:/Users/User/source/repos/PythonConsole/PythonConsole/image.jpg')
-    image.show()
-"""
-   

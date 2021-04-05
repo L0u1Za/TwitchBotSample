@@ -1,4 +1,5 @@
-from entities import Timer, RandomNumber, Image
+from entities import Timer, Image
+import insertion
 class Command:
     def __init__(self, title):
         self.title = title
@@ -10,7 +11,7 @@ class TextResponse(Command):
         self.text = text
         super().__init__(title)
     def react(self, user, bot):
-        bot.send_message(f"{user}, {self.text}")
+        bot.send_message(insertion.from_origin_to_modified_insertion_handler(self.text, user))
 
 #class SoundCommand(Command):
 #   def __init__(self, title, path):
@@ -26,4 +27,4 @@ class ImageCommand(Command):
     def react(self):
         self.image.show()
 
-lst = [TextResponse('!ало', 'ну привет'), TextResponse('!любоф', 'я тоже люблю тебя, заюш...')]
+lst = [TextResponse('!ало', '${TagTarget()}, ну привет тебе'), TextResponse('!любоф', '${TagTarget()}, я люблю тебя на ${RandomNumber(0, 101)} процентов!')]

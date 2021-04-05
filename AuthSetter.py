@@ -1,6 +1,6 @@
 print("Введи логин Twitch: ", end="")
 login = input()
-print("Введи OAuth аутентификатор без префикса (доступен по ссылке https://twitchapps.com/tmi): ", end="")
+print("Введи OAuth аутентификатор (доступен по ссылке https://twitchapps.com/tmi): ", end="")
 oauth = input()
 import json
 path = "data.json"
