@@ -48,7 +48,7 @@ class Bot(SingleServerIRCBot):
             target = users[0]
         for cm in commands.lst:
             if message == cm.title:
-                cm.react(target, bot)
+                cm.react(target, bot, *flags)
                 print(f"Succesful execution: {message}")
                 return
         #self.send_message(f"I don't know this command: {message}.")

@@ -18,6 +18,7 @@ class Sound:
     def play(self):
         winsound.PlaySound(self.path, winsound.SND_FILENAME)
 
+
 import webbrowser
 webbrowser.register('Chrome', None, webbrowser.BackgroundBrowser('C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'))
 browser = webbrowser.get('Chrome')
@@ -27,3 +28,6 @@ class Image:
         self.path = path
     def show(self):
         browser.open(self.path)
+
+if __name__ == "__main__":
+    Image('/aboba.jpg').show()
