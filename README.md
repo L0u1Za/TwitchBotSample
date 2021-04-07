@@ -21,5 +21,5 @@ Just simple twitch-bot(not finished)
 * Run AuthSetter.py to log in the bot and follow the instructions provided.
 * Run Bot.py
 
-#EconomyEvents(not really working now)
+# EconomyEvents(not really working now)
 Now there are 1 awailable Event. It's `CollectBets`. Participants give their points, and there is only 1 winner, who will take all. (Support for db will be added later)
